@@ -12,4 +12,5 @@ public class Collisiondetection : MonoBehaviour {
 	void Update () {
 	
 	}
+    void OnTriggerEnter
 }
