@@ -9,9 +9,10 @@ public class MouseCameraMovement : MonoBehaviour {
     public float roty = 0.0f;
     public float rotx = 0.0f;
 	// Use this for initialization
-	void Start () {
-	    Vecto
-	}
+	/*void Start() {
+        Vecto
+
+    }*/
 	
 	// Update is called once per frame
 	void Update () {

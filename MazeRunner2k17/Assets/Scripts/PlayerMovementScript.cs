@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class NewBehaviourScript : MonoBehaviour {
+public class PlayerMovementScript : MonoBehaviour {
 
     //Setting movement speed variables for going backwards and forwards
     public float movespeedFront = 10;
