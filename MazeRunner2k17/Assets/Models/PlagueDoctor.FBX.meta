@@ -122,6 +122,29 @@ ModelImporter:
     4300040: Cylinder017
     4300042: Cylinder018
     4300044: Cylinder019
+    6400000: Cone001
+    6400002: Cone002
+    6400004: Cone003
+    6400006: Cone004
+    6400008: Cylinder001
+    6400010: Cylinder016
+    6400012: Cylinder017
+    6400014: Cylinder018
+    6400016: Cylinder019
+    6400018: Cylinder020
+    6400020: Cylinder021
+    6400022: Cylinder022
+    6400024: Cylinder023
+    6400026: Hand001
+    6400028: Hand002
+    6400030: Hat
+    6400032: HatTop
+    6400034: Hoved
+    6400036: LArm002
+    6400038: LArm003
+    6400040: "N\xE6b"
+    6400042: RArm
+    6400044: RArm001
   materials:
     importMaterials: 1
     materialName: 0
@@ -149,7 +172,7 @@ ModelImporter:
     globalScale: 0.14
     meshCompression: 0
     addColliders: 0
-    importBlendShapes: 0
+    importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
