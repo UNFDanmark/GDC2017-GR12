@@ -16,10 +16,14 @@ public class PlayerMovementScript : MonoBehaviour {
     public float pitch = 0.0f;
     //Making variable for object Pickup and point control
     public int objectCount = 0;
-    public int doorOpen = 0;
+    //making variable for audio source
+    public AudioSource walking;
+    public float timeOfLastStep = 0f;
+    public float LengthOfSound = 0f;
 
     void Awake()
     {
+        walking = GetComponent<AudioSource>();
         //Connecting the variable to the physics of object
         myRigidbody = GetComponent<Rigidbody>();
     }
@@ -44,11 +48,8 @@ public class PlayerMovementScript : MonoBehaviour {
         }
 
         transform.eulerAngles = new Vector3(pitch, yaw, 0);
-        if(objectCount == 3)
-        {
-            doorOpen = 1;
-        }
-        
+
+        WalkingCheck();
     }
     // Update called 50 times per second, for physics movement
 	void FixedUpdate () {
@@ -74,5 +75,25 @@ public class PlayerMovementScript : MonoBehaviour {
             objectCount ++;
         }
     }
-
+    public void WalkingCheck()
+    {
+        if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)) && (Time.time - timeOfLastStep) >= LengthOfSound)
+        {
+            walkSound();
+            timeOfLastStep = Time.time;
+        }
+        else if (!(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)))
+        {
+            stopWalkSound();
+        }
+    }
+    public void walkSound()
+    {
+        walking.Play();
+    }
+    public void stopWalkSound()
+    {
+        walking.Stop();
+        timeOfLastStep = Time.time - LengthOfSound;
+    }    
 }

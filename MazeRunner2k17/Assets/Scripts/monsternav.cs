@@ -18,4 +18,16 @@ public class monsternav : MonoBehaviour {
     {
         navigationAgent.destination = player.transform.position;
 	}
+    void OnCollisionEnter(Collision death)
+    {
+         if (death.collider.CompareTag("Player"))
+         {
+            Kill();
+         }
+     
+    }
+    void Kill()
+    {
+        SceneManager.LoadScene("deathscreen");
+    }
 }
