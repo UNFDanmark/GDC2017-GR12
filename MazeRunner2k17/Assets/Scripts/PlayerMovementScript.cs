@@ -21,6 +21,8 @@ public class PlayerMovementScript : MonoBehaviour {
     public AudioSource walking;
     public float timeOfLastStep = 0f;
     public float LengthOfSound = 0f;
+    public monsternav enemyObject;
+    
 
     void Awake()
     {
@@ -51,6 +53,12 @@ public class PlayerMovementScript : MonoBehaviour {
         transform.eulerAngles = new Vector3(pitch, yaw, 0);
 
         WalkingCheck();
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            objectCount++;
+        }
+        lightswitch();
     }
     // Update called 50 times per second, for physics movement
 	void FixedUpdate () {
@@ -72,8 +80,12 @@ public class PlayerMovementScript : MonoBehaviour {
     void OnTriggerEnter(Collider trigger)
     {
         {
-            Destroy(trigger.gameObject);
-            objectCount ++;
+            if (trigger.CompareTag("Object"))
+            {
+                Destroy(trigger.gameObject);
+                objectCount++;
+                enemyObject.increaseSpeed();
+            }
         }
     }
     void OnCollisionEnter(Collision collision)
@@ -103,5 +115,13 @@ public class PlayerMovementScript : MonoBehaviour {
     {
         walking.Stop();
         timeOfLastStep = Time.time - LengthOfSound;
+    }
+    public void lightswitch()
+    {
+        
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            transform.FindChild("LanternLightSource").GetComponent<Light>().enabled = !transform.FindChild("LanternLightSource").GetComponent<Light>().enabled;
+        }
     }    
 }

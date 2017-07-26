@@ -7,29 +7,37 @@ public class monsternav : MonoBehaviour {
 
     public NavMeshAgent navigationAgent;
     public PlayerMovementScript player;
+    public float enemySpeed = 1.5f;
+
     void Awake()
     {
+
     }
 	// Use this for initialization
 	void Start () {
+
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
         navigationAgent.destination = player.transform.position;
+
 	}
     void OnCollisionEnter(Collision death)
     {
          if (death.collider.CompareTag("Player"))
          {
             Kill();
-
          }
-     
     }
     void Kill()
     {
         SceneManager.LoadScene("deathscreen");
+    }
+    public void increaseSpeed()
+    {
+        enemySpeed++;
+        GetComponent<NavMeshAgent>().speed = enemySpeed;
     }
 }
