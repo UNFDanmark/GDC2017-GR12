@@ -9,3 +9,5 @@ EditorBuildSettings:
     path: Assets/Scenes/movementtester.unity
   - enabled: 1
     path: Assets/Scenes/deathscreen.unity
+  - enabled: 1
+    path: Assets/Scenes/victoryscreen.unity
