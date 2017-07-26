@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovementScript : MonoBehaviour {
 
@@ -75,14 +76,21 @@ public class PlayerMovementScript : MonoBehaviour {
             objectCount ++;
         }
     }
+    void OnCollisionEnter(Collision collision)
+    {
+        if(collision.collider.CompareTag("Door") && objectCount == 3)
+        {
+            SceneManager.LoadScene("victoryscreen");
+        }
+    }
     public void WalkingCheck()
     {
-        if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow)) && (Time.time - timeOfLastStep) >= LengthOfSound)
+        if ((Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0) && (Time.time - timeOfLastStep) >= LengthOfSound)
         {
             walkSound();
             timeOfLastStep = Time.time;
         }
-        else if (!(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow)))
+        else if (!(Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0))
         {
             stopWalkSound();
         }
