@@ -32,6 +32,9 @@ public class PlayerMovementScript : MonoBehaviour {
     public float rotationTimerUp = 0;
     public float timeToRotate = 0.5f;
     public float timeToRotateUp = 0.5f;
+    public float lookTime = 1;
+    public PDAnimatorScript enemyAnimator;
+    public float lightRange = 10f;
     void Awake()
     {
         walking = GetComponent<AudioSource>();
@@ -40,8 +43,8 @@ public class PlayerMovementScript : MonoBehaviour {
     }
     // Use this for initialization
     void Start () {
-	
-	}
+        Cursor.visible = false;
+    }
 	
 	// Update is called once per frame, for camera movement
     void Update()
@@ -61,13 +64,17 @@ public class PlayerMovementScript : MonoBehaviour {
             }
             else if (rotationTimerUp < timeToRotateUp)
             {
+                enemyAnimator.deathLooky();
                 transform.eulerAngles = new Vector3(Mathf.LerpAngle(deathLookEndPitch, deathLookEndPitch - 40, rotationTimerUp / timeToRotateUp), deathLookEndYaw, 0);
                 rotationTimerUp += Time.deltaTime;
             }
             else
             {
                 transform.eulerAngles = new Vector3(deathLookEndPitch - 40, deathLookEndYaw, 0);
-                SceneManager.LoadScene("deathscreen");
+                if(lookTime < Time.time)
+                {
+                    SceneManager.LoadScene("deathscreen");
+                }
             }
             stopWalkSound();
         }
@@ -101,13 +108,15 @@ public class PlayerMovementScript : MonoBehaviour {
         }
         else if (collision.collider.CompareTag("Enemy"))
         {
+            enemyAnimator.stopWalking();
             Kill();
+            enemyObject.deathStare();
+            lookTime += Time.time + timeToRotate + timeToRotateUp;
             dead = true;
         }
     }
     void Kill()
     {
-        //SceneManager.LoadScene("deathscreen");
         deathLookStartYaw = transform.eulerAngles.y;
         deathLookStartPitch = transform.eulerAngles.x;
 
@@ -144,10 +153,17 @@ public class PlayerMovementScript : MonoBehaviour {
     }
     public void lightswitch()
     {
-        
-        if (Input.GetKeyDown(KeyCode.Q))
+
+        if (Input.GetKeyDown(KeyCode.Q) && lightRange == 10)
         {
-            transform.FindChild("LanternLightSource").GetComponent<Light>().enabled = !transform.FindChild("LanternLightSource").GetComponent<Light>().enabled;
+            lightRange = transform.FindChild("LanternLightSource").GetComponent<Light>().range = 4;
+            enemyObject.enemySpeed = enemyObject.enemySpeed / 2;
+
+        }
+        else if(Input.GetKeyDown(KeyCode.Q))
+        {
+            lightRange = transform.FindChild("LanternLightSource").GetComponent<Light>().range = 10;
+            enemyObject.enemySpeed = enemyObject.enemySpeed * 2;
         }
     }
     public void CameraMovement()

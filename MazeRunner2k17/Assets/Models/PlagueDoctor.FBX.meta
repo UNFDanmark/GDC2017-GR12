@@ -1,0 +1,343 @@
+fileFormatVersion: 2
+guid: 24eb5c34ba6b3d44d9ef96d25eeef305
+timeCreated: 1501174954
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Bottom
+    100002: Box001
+    100004: Cape
+    100006: Cylinder Tomel
+    100008: Cylinder020
+    100010: Cylinder021
+    100012: Cylinder022
+    100014: Cylinder023
+    100016: Cylinder024
+    100018: Cylinder025
+    100020: Cylinder026
+    100022: Cylinder027
+    100024: Hand002
+    100026: Hand003
+    100028: Hat
+    100030: HatTop
+    100032: Hoved
+    100034: LARm
+    100036: MiddleBody
+    100038: "N\xE6b"
+    100040: //RootNode
+    100042: RArm001
+    100044: Shoulders
+    100046: Upperbody
+    400000: Bottom
+    400002: Box001
+    400004: Cape
+    400006: Cylinder Tomel
+    400008: Cylinder020
+    400010: Cylinder021
+    400012: Cylinder022
+    400014: Cylinder023
+    400016: Cylinder024
+    400018: Cylinder025
+    400020: Cylinder026
+    400022: Cylinder027
+    400024: Hand002
+    400026: Hand003
+    400028: Hat
+    400030: HatTop
+    400032: Hoved
+    400034: LARm
+    400036: MiddleBody
+    400038: "N\xE6b"
+    400040: //RootNode
+    400042: RArm001
+    400044: Shoulders
+    400046: Upperbody
+    2300000: Bottom
+    2300002: Box001
+    2300004: Cape
+    2300006: Cylinder Tomel
+    2300008: Cylinder020
+    2300010: Cylinder021
+    2300012: Cylinder022
+    2300014: Cylinder023
+    2300016: Cylinder024
+    2300018: Cylinder025
+    2300020: Cylinder026
+    2300022: Cylinder027
+    2300024: Hand002
+    2300026: Hand003
+    2300028: Hat
+    2300030: HatTop
+    2300032: Hoved
+    2300034: LARm
+    2300036: MiddleBody
+    2300038: "N\xE6b"
+    2300040: RArm001
+    2300042: Shoulders
+    2300044: Upperbody
+    3300000: Bottom
+    3300002: Box001
+    3300004: Cape
+    3300006: Cylinder Tomel
+    3300008: Cylinder020
+    3300010: Cylinder021
+    3300012: Cylinder022
+    3300014: Cylinder023
+    3300016: Cylinder024
+    3300018: Cylinder025
+    3300020: Cylinder026
+    3300022: Cylinder027
+    3300024: Hand002
+    3300026: Hand003
+    3300028: Hat
+    3300030: HatTop
+    3300032: Hoved
+    3300034: LARm
+    3300036: MiddleBody
+    3300038: "N\xE6b"
+    3300040: RArm001
+    3300042: Shoulders
+    3300044: Upperbody
+    4300000: Hoved
+    4300002: HatTop
+    4300004: Hat
+    4300006: "N\xE6b"
+    4300008: Bottom
+    4300010: Cape
+    4300012: Shoulders
+    4300014: MiddleBody
+    4300016: Upperbody
+    4300018: Box001
+    4300020: Hand003
+    4300022: Cylinder024
+    4300024: Cylinder025
+    4300026: Cylinder026
+    4300028: Cylinder027
+    4300030: Cylinder Tomel
+    4300032: LARm
+    4300034: Cylinder021
+    4300036: Cylinder022
+    4300038: Cylinder023
+    4300040: Hand002
+    4300042: Cylinder020
+    4300044: RArm001
+    7400000: Walk
+    7400002: Deathlooky
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Walk
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bottom
+        weight: 1
+      - path: Box001
+        weight: 1
+      - path: Box001/Hand003
+        weight: 1
+      - path: Box001/Hand003/Cylinder Tomel
+        weight: 1
+      - path: Box001/Hand003/Cylinder024
+        weight: 1
+      - path: Box001/Hand003/Cylinder025
+        weight: 1
+      - path: Box001/Hand003/Cylinder026
+        weight: 1
+      - path: Box001/Hand003/Cylinder027
+        weight: 1
+      - path: Cape
+        weight: 1
+      - path: Hoved
+        weight: 1
+      - path: Hoved/Hat
+        weight: 1
+      - path: Hoved/HatTop
+        weight: 1
+      - path: "Hoved/N\xE6b"
+        weight: 1
+      - path: LARm
+        weight: 1
+      - path: LARm/Cylinder020
+        weight: 1
+      - path: LARm/Cylinder021
+        weight: 1
+      - path: LARm/Cylinder022
+        weight: 1
+      - path: LARm/Cylinder023
+        weight: 1
+      - path: LARm/Hand002
+        weight: 1
+      - path: LARm/RArm001
+        weight: 1
+      - path: MiddleBody
+        weight: 1
+      - path: Shoulders
+        weight: 1
+      - path: Upperbody
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Deathlooky
+      takeName: Take 001
+      firstFrame: 80
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bottom
+        weight: 1
+      - path: Box001
+        weight: 1
+      - path: Box001/Hand003
+        weight: 1
+      - path: Box001/Hand003/Cylinder Tomel
+        weight: 1
+      - path: Box001/Hand003/Cylinder024
+        weight: 1
+      - path: Box001/Hand003/Cylinder025
+        weight: 1
+      - path: Box001/Hand003/Cylinder026
+        weight: 1
+      - path: Box001/Hand003/Cylinder027
+        weight: 1
+      - path: Cape
+        weight: 1
+      - path: Hoved
+        weight: 1
+      - path: Hoved/Hat
+        weight: 1
+      - path: Hoved/HatTop
+        weight: 1
+      - path: "Hoved/N\xE6b"
+        weight: 1
+      - path: LARm
+        weight: 1
+      - path: LARm/Cylinder020
+        weight: 1
+      - path: LARm/Cylinder021
+        weight: 1
+      - path: LARm/Cylinder022
+        weight: 1
+      - path: LARm/Cylinder023
+        weight: 1
+      - path: LARm/Hand002
+        weight: 1
+      - path: LARm/RArm001
+        weight: 1
+      - path: MiddleBody
+        weight: 1
+      - path: Shoulders
+        weight: 1
+      - path: Upperbody
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.14
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
