@@ -24,11 +24,6 @@ public class SoundGuyScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        currentScene = SceneManager.GetActiveScene();
-        activeScene = currentScene.name;
-        if (activeScene == "movementester")
-        {
-            Destroy(gameObject);
-        }
+
     }
 }

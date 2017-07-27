@@ -1,62 +1,15 @@
 fileFormatVersion: 2
-guid: b96baf10a8ac0a945aa7a98041e756d3
-timeCreated: 1501187624
+guid: f916bdc9d0d8ccc428dcbb09778ad509
+timeCreated: 1501193018
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: Box001
-    100002: Box002
-    100004: Cylinder001
-    100006: Cylinder003
-    100008: Cylinder005
-    100010: Cylinder006
-    100012: Cylinder007
-    100014: Cylinder008
-    100016: //RootNode
-    100018: Top
-    400000: Box001
-    400002: Box002
-    400004: Cylinder001
-    400006: Cylinder003
-    400008: Cylinder005
-    400010: Cylinder006
-    400012: Cylinder007
-    400014: Cylinder008
-    400016: //RootNode
-    400018: Top
-    2300000: Box001
-    2300002: Box002
-    2300004: Cylinder001
-    2300006: Cylinder003
-    2300008: Cylinder005
-    2300010: Cylinder006
-    2300012: Cylinder007
-    2300014: Cylinder008
-    2300016: //RootNode
-    2300018: Top
-    3300000: Box001
-    3300002: Box002
-    3300004: Cylinder001
-    3300006: Cylinder003
-    3300008: Cylinder005
-    3300010: Cylinder006
-    3300012: Cylinder007
-    3300014: Cylinder008
-    3300016: //RootNode
-    3300018: Top
-    4300000: Cylinder002
-    4300002: Cylinder001
-    4300004: Top
-    4300006: Cylinder007
-    4300008: Cylinder006
-    4300010: Box001
-    4300012: Box002
-    4300014: Cylinder003
-    4300016: Cylinder008
-    4300018: Cylinder005
-    7400000: Take 001
-    9500000: //RootNode
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Box001
   materials:
     importMaterials: 1
     materialName: 0
@@ -115,7 +68,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
