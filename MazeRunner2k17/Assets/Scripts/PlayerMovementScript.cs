@@ -30,8 +30,8 @@ public class PlayerMovementScript : MonoBehaviour {
     public bool dead = false;
     public float rotationTimer = 0;
     public float rotationTimerUp = 0;
-    public float timeToRotate = 1;
-    public float timeToRotateUp = 1;
+    public float timeToRotate = 0.5f;
+    public float timeToRotateUp = 0.5f;
     void Awake()
     {
         walking = GetComponent<AudioSource>();
@@ -67,6 +67,7 @@ public class PlayerMovementScript : MonoBehaviour {
             else
             {
                 transform.eulerAngles = new Vector3(deathLookEndPitch - 40, deathLookEndYaw, 0);
+                SceneManager.LoadScene("deathscreen");
             }
             stopWalkSound();
         }
@@ -89,6 +90,7 @@ public class PlayerMovementScript : MonoBehaviour {
             Destroy(trigger.gameObject);
             objectCount++;
             enemyObject.increaseSpeed();
+            print(trigger);
         }
     }
     void OnCollisionEnter(Collision collision)
