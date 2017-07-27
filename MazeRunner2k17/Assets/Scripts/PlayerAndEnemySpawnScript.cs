@@ -22,10 +22,14 @@ public class PlayerAndEnemySpawnScript : MonoBehaviour {
             enemySpawn = playerSpawn - 2;
         }
 
+        enemy.gameObject.SetActive(false);
+
         player.transform.position = GameObject.Find("Spawn_" + playerSpawn).transform.position;
         enemy.transform.position = GameObject.Find("Spawn_" + enemySpawn).transform.position;
 
         player.transform.position = new Vector3(player.transform.position.x, playHeight, player.transform.position.z);
+
+        enemy.gameObject.SetActive(true);
     }
 	
 	// Update is called once per frame

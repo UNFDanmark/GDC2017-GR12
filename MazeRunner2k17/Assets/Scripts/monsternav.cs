@@ -21,20 +21,11 @@ public class monsternav : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        navigationAgent.destination = player.transform.position;
-
+        if (navigationAgent.enabled)
+        {
+            navigationAgent.destination = player.transform.position;
+        }
 	}
-    void OnCollisionEnter(Collision death)
-    {
-         if (death.collider.CompareTag("Player"))
-         {
-            Kill();
-         }
-    }
-    void Kill()
-    {
-        SceneManager.LoadScene("deathscreen");
-    }
     public void increaseSpeed()
     {
         enemySpeed++;

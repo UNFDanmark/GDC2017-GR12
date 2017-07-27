@@ -21,6 +21,7 @@ public class ObjectActivator : MonoBehaviour {
         for (int i = 0; 3 > i; i++)
         {
             spawnDeciders[i].SetActive(true);
+            print(spawnDeciders[i]);
         }
     }
 	
