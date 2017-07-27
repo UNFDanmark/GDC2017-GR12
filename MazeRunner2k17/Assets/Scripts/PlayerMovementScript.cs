@@ -22,8 +22,16 @@ public class PlayerMovementScript : MonoBehaviour {
     public float timeOfLastStep = 0f;
     public float LengthOfSound = 0f;
     public monsternav enemyObject;
-    
-
+    public Transform Enemy;
+    public float deathLookStartYaw = 0;
+    public float deathLookStartPitch = 0;
+    public float deathLookEndYaw = 0;
+    public float deathLookEndPitch = 0;
+    public bool dead = false;
+    public float rotationTimer = 0;
+    public float rotationTimerUp = 0;
+    public float timeToRotate = 1;
+    public float timeToRotateUp = 1;
     void Awake()
     {
         walking = GetComponent<AudioSource>();
@@ -38,40 +46,37 @@ public class PlayerMovementScript : MonoBehaviour {
 	// Update is called once per frame, for camera movement
     void Update()
     {
-        yaw += MouseSensitivityHorizontal * Input.GetAxis("Mouse X") * Time.deltaTime;
-        pitch -= MouseSensitivityVertical * Input.GetAxis("Mouse Y") * Time.deltaTime;
-
-        if (pitch >= 80)
+        if (!dead)
         {
-            pitch = 80;
+            CameraMovement();
+
+            WalkingCheck();
         }
-        else if (pitch <= -80)
+        else
         {
-            pitch = -80;
-        }
-
-        transform.eulerAngles = new Vector3(pitch, yaw, 0);
-
-        WalkingCheck();
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            objectCount++;
+            if (rotationTimer < timeToRotate)
+            {
+                transform.eulerAngles = new Vector3(Mathf.LerpAngle(deathLookStartPitch, deathLookEndPitch, rotationTimer / timeToRotate), Mathf.LerpAngle(deathLookStartYaw, deathLookEndYaw, rotationTimer / timeToRotate), 0);
+                rotationTimer += Time.deltaTime;
+            }
+            else if (rotationTimerUp < timeToRotateUp)
+            {
+                transform.eulerAngles = new Vector3(Mathf.LerpAngle(deathLookEndPitch, deathLookEndPitch - 40, rotationTimerUp / timeToRotateUp), deathLookEndYaw, 0);
+                rotationTimerUp += Time.deltaTime;
+            }
+            else
+            {
+                transform.eulerAngles = new Vector3(deathLookEndPitch - 40, deathLookEndYaw, 0);
+            }
+            stopWalkSound();
         }
         lightswitch();
     }
     // Update called 50 times per second, for physics movement
 	void FixedUpdate () {
-        if (Input.GetAxis("Vertical") > 0)
+        if (!dead)
         {
-            move(movespeedFront * Input.GetAxis("Vertical"), movespeedStrafe * Input.GetAxis("Horizontal"));
-        }
-        else if (Input.GetAxis("Vertical") < 0) 
-        {
-            move(movespeedBack * Input.GetAxis("Vertical"), movespeedStrafe * Input.GetAxis("Horizontal"));
-        }
-        else {
-            move(0, movespeedStrafe * Input.GetAxis("Horizontal"));
+            Movement();
         }
 	}
     void move(float speedForward, float speedStrafe){
@@ -79,13 +84,11 @@ public class PlayerMovementScript : MonoBehaviour {
     }
     void OnTriggerEnter(Collider trigger)
     {
+        if (trigger.CompareTag("Object"))
         {
-            if (trigger.CompareTag("Object"))
-            {
-                Destroy(trigger.gameObject);
-                objectCount++;
-                enemyObject.increaseSpeed();
-            }
+            Destroy(trigger.gameObject);
+            objectCount++;
+            enemyObject.increaseSpeed();
         }
     }
     void OnCollisionEnter(Collision collision)
@@ -94,6 +97,27 @@ public class PlayerMovementScript : MonoBehaviour {
         {
             SceneManager.LoadScene("victoryscreen");
         }
+        else if (collision.collider.CompareTag("Enemy"))
+        {
+            Kill();
+            dead = true;
+        }
+    }
+    void Kill()
+    {
+        //SceneManager.LoadScene("deathscreen");
+        deathLookStartYaw = transform.eulerAngles.y;
+        deathLookStartPitch = transform.eulerAngles.x;
+
+        transform.LookAt(Enemy);
+
+        deathLookEndYaw = transform.eulerAngles.y;
+        deathLookEndPitch = transform.eulerAngles.x;
+
+        transform.eulerAngles = new Vector3(deathLookStartPitch, deathLookStartYaw, 0);
+
+        enemyObject.GetComponent<NavMeshAgent>().enabled = false;
+        myRigidbody.velocity = Vector3.zero;
     }
     public void WalkingCheck()
     {
@@ -122,6 +146,35 @@ public class PlayerMovementScript : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Q))
         {
             transform.FindChild("LanternLightSource").GetComponent<Light>().enabled = !transform.FindChild("LanternLightSource").GetComponent<Light>().enabled;
+        }
+    }
+    public void CameraMovement()
+    {
+        yaw += MouseSensitivityHorizontal * Input.GetAxis("Mouse X") * Time.deltaTime;
+        pitch -= MouseSensitivityVertical * Input.GetAxis("Mouse Y") * Time.deltaTime;
+
+        if (pitch >= 80)
+        {
+            pitch = 80;
+        }
+        else if (pitch <= -80)
+        {
+            pitch = -80;
+        }
+
+        transform.eulerAngles = new Vector3(pitch, yaw, 0);
+    }
+    public void Movement(){
+         if (Input.GetAxis("Vertical") > 0)
+        {
+            move(movespeedFront* Input.GetAxis("Vertical"), movespeedStrafe* Input.GetAxis("Horizontal"));
+        }
+        else if (Input.GetAxis("Vertical") < 0) 
+        {
+            move(movespeedBack* Input.GetAxis("Vertical"), movespeedStrafe* Input.GetAxis("Horizontal"));
+        }
+        else {
+            move(0, movespeedStrafe* Input.GetAxis("Horizontal"));
         }
     }    
 }
