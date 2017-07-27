@@ -13,3 +13,5 @@ EditorBuildSettings:
     path: Assets/Scenes/deathscreen.unity
   - enabled: 1
     path: Assets/Scenes/victoryscreen.unity
+  - enabled: 1
+    path: Assets/Scenes/InfoScreen.unity
