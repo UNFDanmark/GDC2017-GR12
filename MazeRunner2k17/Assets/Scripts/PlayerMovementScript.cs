@@ -49,6 +49,7 @@ public class PlayerMovementScript : MonoBehaviour {
 	// Update is called once per frame, for camera movement
     void Update()
     {
+        Destroy(GameObject.Find("SoundGuy"));
         if (!dead)
         {
             CameraMovement();
@@ -94,6 +95,7 @@ public class PlayerMovementScript : MonoBehaviour {
     {
         if (trigger.CompareTag("Object"))
         {
+            GameObject.Find("ObjectSpawner").GetComponent<AudioSource>().Play();
             Destroy(trigger.gameObject);
             objectCount++;
             enemyObject.increaseSpeed();
