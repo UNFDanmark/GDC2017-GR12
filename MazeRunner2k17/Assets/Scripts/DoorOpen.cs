@@ -22,7 +22,6 @@ public class DoorOpen : MonoBehaviour {
         if (playerMovementScript.objectCount == 3)
         {
             doorOpen = true;
-            GetComponent<MeshRenderer>().material = openDoor;
             dooropen.Play();
         }
 	}
