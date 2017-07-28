@@ -1,0 +1,71 @@
+Initialize engine version: 5.4.1f1 (649f48bbbf0f)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 4600 (ID=0x412)
+    Vendor:   Intel
+    VRAM:     1024 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\AIT-UNF-GDC\Documents\GDC2017-GR12\Child's play - Gruppe 12\Child's play_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\AIT-UNF-GDC\Documents\GDC2017-GR12\Child's play - Gruppe 12\Child's play_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\AIT-UNF-GDC\Documents\GDC2017-GR12\Child's play - Gruppe 12\Child's play_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\AIT-UNF-GDC\Documents\GDC2017-GR12\Child's play - Gruppe 12\Child's play_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\AIT-UNF-GDC\Documents\GDC2017-GR12\Child's play - Gruppe 12\Child's play_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\AIT-UNF-GDC\Documents\GDC2017-GR12\Child's play - Gruppe 12\Child's play_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\AIT-UNF-GDC\Documents\GDC2017-GR12\Child's play - Gruppe 12\Child's play_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\AIT-UNF-GDC\Documents\GDC2017-GR12\Child's play - Gruppe 12\Child's play_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.111 seconds
+Platform assembly: C:\Users\AIT-UNF-GDC\Documents\GDC2017-GR12\Child's play - Gruppe 12\Child's play_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\AIT-UNF-GDC\Documents\GDC2017-GR12\Child's play - Gruppe 12\Child's play_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1200 59Hz; virtual: 3840x1200 at 0,0
+<RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 0.624271 ms
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 1494 -> priority: 1 
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 3.249654 ms
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 195.
+Total: 0.177500 ms (FindLiveObjects: 0.012376 ms CreateObjectMapping: 0.008150 ms MarkObjects: 0.145502 ms  DeleteObjects: 0.011169 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.821394 ms
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 4339.
+Total: 0.458845 ms (FindLiveObjects: 0.099617 ms CreateObjectMapping: 0.082712 ms MarkObjects: 0.261723 ms  DeleteObjects: 0.014489 ms)
+
+Object_5 (UnityEngine.GameObject)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Object_7 (UnityEngine.GameObject)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Object_18 (UnityEngine.GameObject)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Object_5 (UnityEngine.SphereCollider)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Object_18 (UnityEngine.SphereCollider)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.870098 ms
+
+Unloading 548 unused Assets to reduce memory usage. Loaded Objects now: 202.
+Total: 4.041767 ms (FindLiveObjects: 0.019017 ms CreateObjectMapping: 0.030790 ms MarkObjects: 0.126786 ms  DeleteObjects: 3.864869 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.187565 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 201.
+Total: 0.690683 ms (FindLiveObjects: 0.006641 ms CreateObjectMapping: 0.007546 ms MarkObjects: 0.108070 ms  DeleteObjects: 0.568123 ms)
+
